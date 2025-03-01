@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ </title>
+    <!-- goglle fonts cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+       @theme {
+       --font-Poppins: "Poppins", "sans-serif";
+      }
+    </style>
+</head>
+<body class="bg-sky-100 font-Poppins box-border">
+    <section class="w-11/12 mx-auto pt-5 pb-5">
+        <!-- header part in html start -->
+         <header class="grid grid-cols-1 lg:grid-flow-col justify-items-center sm:justify-items-stretch bg-white px-6 py-5 rounded-xl">
+             <div class="flex items-center space-x-2">
+                <img class="w-12 h-12"  src="./assets/logo.png" alt="">
+                <h1 class="text-3xl text-gray-800">Dev<span class="font-semibold text-black">Board</span></h1>
+             </div>
+             <div class=" items-center space-x-8">
+                 <button id="back-desk" class="btn bg-[#3752FD] text-white rounded-lg">Back to Desk</button>
+             </div>
+         </header>
+         <!-- header part in html end -->
+          <h1 class="text-3xl text-gray-700 font-bold text-center mt-4">BLOG</h1>
+          <!-- FAQ  part start-->
+           <section class="mt-4 mb-10 space-y-3">
+            <!-- 1st FAQ -->
+              <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title font-semibold">Question-1: What are the different ways to select an element in the DOM?</div>
+                <div class="collapse-content text-sm">I know of some processes. ways to select an element in the DOM.
+                  <ul class="list-decimal ml-10 space-y-2">
+                    <li>getElementById().</li>
+                    <li>getElementsByClassName().</li>
+                    <li>getElementsByTagName().</li>
+                    <li>querySelector().</li>
+                    <li>querySelectorAll().</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 2nd FAQ -->
+              <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title font-semibold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</div>
+                <div class="collapse-content text-sm">in innerHTML,innerText, and textContent are properties of DOM .
+                    <ul class="list-decimal ml-10 space-y-2">
+                        <li>when you use the innerHTML property,it reads both the HTML markup and the text content of the element </li>
+                        <li>This property focuses on the rendered text content. When you use innerText to read the content of an element, it returns the text as it appears on screen. It ignores HTML tags.</li>
+                        <li>The textContent property also ignores all HTML tags and returns only the text. Whiles innerText reads text as it is rendered on screen, textContent reads text as it is in the markup. It also returns all text, whether it's rendered on screen or not.</li>
+                       
+                    </ul>
+                </div>
+              </div>
+              <!-- 3rd FAQ -->
+              <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title font-semibold">Question-3: What is event delegation in the DOM?</div>
+                <div class="collapse-content text-sm">Event delegation in JavaScript is a pattern that efficiently handles events. Events can be added to a parent element instead of to every element. It refers to using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated.</div>
+              </div>
+              <!-- 4th FAQ -->
+              <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title font-semibold">Question-4: What is event bubbling in the DOM?</div>
+                <div class="collapse-content text-sm">Event bubbling is a type of DOM event propagation[1] where the event first triggers on the innermost target element, and then successively triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element or document object[2] (Provided the handler is initialized)</div>
+              </div>
+              <!-- 5th FAQ -->
+              <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title font-semibold">Question-5: How do you create, add, and remove elements using JavaScript?</div>
+                <div class="collapse-content text-sm">
+                    <ul class="list-decimal ml-10 space-y-2">
+                        <li>in JavaScript, you can create a new HTML element using the document.createElement() method. this method generates element but does not place in the document untile you somthing add it.</li>
+                        <li>Once an element is created, it must be added to the DOM to make it visible on the webpage. This can be done using methods like appendChild() and innerHTML. For example, to add the newly created paragraph to the body of the document:</li>
+                        <li>When an element is no longer needed, it can be removed using the remove() method or removeChild(). To remove an element directly</li>
+                    </ul>
+                </div>
+              </div>
+           </section>
+          <!-- FAQ  part end-->
+    </section>
+
+   <script src="./js/script.js"></script>
+   <script src="./js/qus.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
