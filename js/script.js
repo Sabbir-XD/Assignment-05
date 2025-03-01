@@ -1,5 +1,10 @@
 // background color change 
-
+const bgColors = ["#cfecf7", "#494afd", "	#008080", "#FFC0CB", "#e74c3c", "#2ecc71"];
+document.getElementById("bg-colo-btn")
+    .addEventListener('click', function(){
+        const BgRandomColor = bgColors[Math.floor(Math.random() * bgColors.length)];
+        document.body.style.backgroundColor = BgRandomColor;
+    })
 
 // dynamic date in js
 
@@ -19,8 +24,7 @@
 updateDate();
 
 
-// click the button and some featurs working
-
+// click the button and some feature working
 const buttonComplete = document.querySelectorAll('.btn-complete');
 let clickCount = 0;
 
@@ -67,13 +71,10 @@ document.getElementById('clear-history-btn')
     })
 
 
-// discover button click shift a anothe page
+// discover button click shift a another page
 document.getElementById("discover-btn")
     .addEventListener('click', function(){
-        window.location.href='../qus.html';
+        window.location.href=("faq.html");
     })
-
-
-
 
 
