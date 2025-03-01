@@ -77,11 +77,6 @@ document.getElementById("discover-btn")
         window.location.href=("faq.html");
     });
 
-// back do desk to index html
-    document.getElementById('back-desk')
-    .addEventListener("click", function(){
-        window.location.href="index.html";
-    })
 
 
 
