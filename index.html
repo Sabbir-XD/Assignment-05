@@ -4,10 +4,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Board</title>
+    <!-- goglle fonts cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- daisyUI cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+       @theme {
+       --font-Poppins: "Poppins", "sans-serif";
+      }
+    </style>
 </head>
-<body>
+<body class="bg-sky-200 font-Poppins box-border">
+    <section class="w-11/12 mx-auto pt-5 pb-5">
+        <!-- header part in html start -->
+         <header class="grid grid-cols-1 lg:grid-flow-col justify-items-center sm:justify-items-stretch bg-white px-6 py-5 rounded-xl">
+             <div class="flex items-center space-x-2">
+                <img class="w-12 h-12"  src="./assets/logo.png" alt="">
+                <h1 class="text-3xl text-gray-800">Dev<span class="font-semibold text-black">Board</span></h1>
+             </div>
+             <div class="flex items-center space-x-8">
+                 <div class="flex items-center space-x-3 px-4 py-3 bg-sky-50 rounded-full">
+                    <img src="./assets/checkbox.png" alt="">
+                    <span class="text-3xl font-bold">23</span>
+                 </div>
+                 <img id="bg-colo-btn" class="p-3 bg-sky-50 rounded-full" src="./assets/theme-btn.png" alt="">
+             </div>
+         </header>
+         <!-- header part in html end -->
+
+         <!-- main section part in html start-->
+          <main class="mt-5">
+             <section class="grid grid-cols-1 md:grid-cols-4 gap-3">
+               <section class="grid col-span-1 md:col-span-3 bg-white p-6 rounded-lg">
+                    <!-- discover part in htm -->
+                    <div class="grid col-span-1 md:col-span-3">
+                      <div class="grid grid-cols-1 md:grid-cols-4 gap-2">
+                        <!-- 1st column -->
+                        <div class="grid col-span-1 bg-blue-50 rounded-xl px-2 py-6">
+                          <div class="flex items-center gap-2">
+                              <div class="bg-white py-3 px-3 rounded-full">
+                                  <img class="" src="./assets/checkbox.png" alt="check-box">
+                              </div>
+                              <div>
+                                <p class="font-medium text-gray-600">Task Assigned </p>
+                                <h1 class="text-3xl font-black">05</h1>
+                              </div>
+                          </div>
+                        </div>
+                        <!-- 2nd column -->
+                        <div class="grid md:col-span-2 rounded-xl bg-gradient-to-r from-[#3752FD] from-0%  via-[#6C7FFA] via-50% to-[#9BA8F8] to-100%">
+                          <div class="flex items-center pl-8 pr-4 py-5">
+                              <img src="./assets/board.png" alt="board">
+                              <h1 class="text-2xl font-medium text-white ml-2">Discover Something <br> New Today!</h1>
+                          </div>
+                        </div>
+                        <!-- 3rd column -->
+                        <div class="grid col-span-1 bg-blue-50 rounded-xl px-2 py-6">
+                          <div class="flex justify-center items-center gap-2">
+                              <div class="bg-white py-3 px-3 rounded-full">
+                                <img class="" src="./assets/calender.png" alt="check-box">
+                              </div>
+                              <div>
+                                <p class="text-xl text-gray-600">Wed ,</p>
+                                <p id="displayDate" class="text-base text-gray-700 font-bold"></p>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="border-b-2 border-spacing-x-10 border-dashed border-gray-200 mt-6"></span>
+                    </div>
+                  
+                     <!-- cart design part in html -->
+                    <section class="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-6 mt-5">
+                        <!-- 1st cart -->
+                        <div class="w-70 md:w-64 bg-blue-50 shadow-sm p-4 rounded-2xl">
+                          <div class="space-y-4">
+                            <div class="bg-white rounded-lg inline-block">
+                              <p class="p-2 text-xs text-black">ShopEase</p>
+                            </div>
+                            <h1 class="text-base font-medium text-black">Fix Mobile Button Issue </h1>
+                            <div class="bg-white p-4 rounded-lg">
+                              <p class="line-clamp-2 text-gray-400">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                            </div>
+                            <div class="justify-between card-actions">
+                              <div>
+                                  <p class="text-sm text-gray-400">Deadline</p>
+                                  <p class="text-sm font-medium text-gray-800">21 March 2025</p>
+                              </div>
+                              <button class="btn bg-[#3752FD] text-white rounded-lg btn-complete">Completed</button>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- 2nd cart -->
+                        <div class="w-70 md:w-64 bg-blue-50 shadow-sm  p-4 rounded-2xl">
+                          <div class="space-y-4">
+                            <div class="bg-white rounded-lg inline-block">
+                              <p class="p-2 text-xs text-black">CloudSync</p>
+                            </div>
+                            <h1 class="text-base font-medium text-black">Add Dark Mode</h1>
+                            <div class="bg-white p-4 rounded-lg">
+                              <p class="line-clamp-2 text-gray-400">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                            </div>
+                            <div class="justify-between card-actions">
+                              <div>
+                                  <p class="text-sm text-gray-400">Deadline</p>
+                                  <p class="text-sm font-medium text-gray-800">21 March 2025</p>
+                              </div>
+                              <button class="btn bg-[#3752FD] text-white rounded-lg btn-complete">Completed</button>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- 3rd cart -->
+                        <div class="w-70 md:w-64 bg-blue-50 shadow-sm  p-4 rounded-2xl">
+                          <div class="space-y-4">
+                            <div class="bg-white rounded-lg inline-block">
+                              <p class="p-2 text-xs text-black">SwiftPay</p>
+                            </div>
+                            <h1 class="text-base font-medium text-black">Optimize  Home page </h1>
+                            <div class="bg-white p-4 rounded-lg">
+                              <p class="line-clamp-2 text-gray-400">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                and ensure onClick works properly</p>
+                            </div>
+                            <div class="justify-between card-actions">
+                              <div>
+                                  <p class="text-sm text-gray-400">Deadline</p>
+                                  <p class="text-sm font-medium text-gray-800">21 March 2025</p>
+                              </div>
+                              <button class="btn bg-[#3752FD] text-white rounded-lg btn-complete">Completed</button>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- 4th cart -->
+                        <div class="w-70 md:w-64 bg-blue-50 shadow-sm  p-4 rounded-2xl">
+                          <div class="space-y-4">
+                            <div class="bg-white rounded-lg inline-block">
+                              <p class="p-2 text-xs text-black">Meta</p>
+                            </div>
+                            <h1 class="text-base font-medium text-black">Add new emoji 🤲</h1>
+                            <div class="bg-white p-4 rounded-lg">
+                              <p class="line-clamp-2 text-gray-400">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                and ensure onClick works properly</p>
+                            </div>
+                            <div class="justify-between card-actions">
+                              <div>
+                                  <p class="text-sm text-gray-400">Deadline</p>
+                                  <p class="text-sm font-medium text-gray-800">21 March 2025</p>
+                              </div>
+                              <button class="btn bg-[#3752FD] text-white rounded-lg btn-complete">Completed</button>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- 5th cart -->
+                        <div class="w-70 md:w-64 bg-blue-50 shadow-sm  p-4 rounded-2xl">
+                          <div class="space-y-4">
+                            <div class="bg-white rounded-lg inline-block">
+                              <p class="p-2 text-xs text-black">Google LLC</p>
+                            </div>
+                            <h1 class="text-base font-medium text-black">Integrate OpenAI API </h1>
+                            <div class="bg-white p-4 rounded-lg">
+                              <p class="line-clamp-2 text-gray-400">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                and ensure onClick works properly</p>
+                            </div>
+                            <div class="justify-between card-actions">
+                              <div>
+                                  <p class="text-sm text-gray-400">Deadline</p>
+                                  <p class="text-sm font-medium text-gray-800">21 March 2025</p>
+                              </div>
+                              <button class="btn bg-[#3752FD] text-white rounded-lg btn-complete">Completed</button>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- 6th cart -->
+                        <div class="w-70 md:w-64 bg-blue-50 shadow-sm  p-4  rounded-2xl">
+                          <div class="space-y-4">
+                            <div class="bg-white rounded-lg inline-block">
+                              <p class="p-2 text-xs text-black">Glassdoar</p>
+                            </div>
+                            <h1 class="text-base font-medium text-black">Improve Job searching </h1>
+                            <div class="bg-white p-4 rounded-lg">
+                              <p class="line-clamp-2 text-gray-400">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                                and ensure onClick works properly</p>
+                            </div>
+                            <div class="justify-between card-actions">
+                              <div>
+                                  <p class="text-sm text-gray-400">Deadline</p>
+                                  <p class="text-sm font-medium text-gray-800">21 March 2025</p>
+                              </div>
+                              <button class="btn bg-[#3752FD] text-white rounded-lg btn-complete">Completed</button>
+                            </div>
+                          </div>
+                        </div>
+                        
+                    </section>
+
+               </section>
+
+                <!-- clear history part in html -->
+                <section class="grid col-span-1 bg-white p-6 rounded-lg">
+                  <div>
+                    <div class="justify-items-center border-b-2 border-gray-200 border-dashed pb-4">
+                      <div class="flex">
+                        <img src="./assets/activity.png" alt="activity">
+                        <h1 class="text-lg text-gray-600 ml-4 font-medium">Activity Log</h1>
+                      </div>
+                      <button class="btn bg-[#3752FD] text-white rounded-lg mt-3">Clear History</button> 
+                    </div>
+                    <!-- history tamplate in js -->
+                    <div class="mt-4 gap-4 bg-blue-50 rounded-lg">
+                      <p class="p-3 text-sm">You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+                   </div>
+                  </div>
+                </section>
+             </section>
+          </main>
+         <!-- main section part in html end-->
+
+    </section>
 
     <script src="./js/script.js"></script>
 </body>
