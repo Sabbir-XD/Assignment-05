@@ -75,6 +75,14 @@ document.getElementById('clear-history-btn')
 document.getElementById("discover-btn")
     .addEventListener('click', function(){
         window.location.href=("faq.html");
+    });
+
+// back do desk to index html
+    document.getElementById('back-desk')
+    .addEventListener("click", function(){
+        window.location.href="index.html";
     })
+
+
 
 
