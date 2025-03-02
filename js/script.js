@@ -8,7 +8,6 @@ document.getElementById("bg-colo-btn")
 
 // dynamic date in js
 
-
  function updateDate() {
     const todayDate = new Date();
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -30,7 +29,6 @@ let clickCount = 0;
 
 for(let i = 0; i < buttonComplete.length; i++ ){
     const btnComplete = buttonComplete[i];
-    const btnCount = 0;
     btnComplete.addEventListener('click', function(event){
         alert("Board updated successfully");
 
