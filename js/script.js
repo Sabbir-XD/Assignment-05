@@ -1,5 +1,5 @@
 // background color change 
-const bgColors = ["#cfecf7", "#494afd", "	#008080", "#FFC0CB", "#e74c3c", "#2ecc71"];
+const bgColors = ["#cfecf7", "#494afd", "#008080", "#FFC0CB", "#e74c3c", "#2ecc71"];
 document.getElementById("bg-colo-btn")
     .addEventListener('click', function(){
         const BgRandomColor = bgColors[Math.floor(Math.random() * bgColors.length)];
